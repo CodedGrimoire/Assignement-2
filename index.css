@@ -64,6 +64,7 @@ body {
   padding: 60px 80px;
   flex-wrap: wrap;
   gap: 30px;
+  height: 100vh;;
 }
 
 .hero-text {
@@ -149,22 +150,108 @@ body {
   font-size: 16px;
   cursor: pointer;
 }
-
-@media (max-width: 576px) {
-  .join-form {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .join-form input,
-  .join-form button {
-    width: 100%;
-  }
-
-  .join h2 {
-    font-size: 24px;
-  }
+ .plants-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px 20px;
 }
+
+.plants-section h2 {
+    font-family: 'Noto Serif', serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.plants-section p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
+.plants-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plant-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 500px
+}
+
+.plant-card:hover {
+    transform: translateY(-5px);
+}
+
+.plant-image {
+    width: 100%;
+    flex: 1;
+    object-fit: cover;
+}
+
+.plant-info {
+    padding: 1.5rem;
+    flex-shrink: 0;
+}
+
+.plant-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.plant-price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    background: #E95A08;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: #d54e07;
+}
+
+@media (max-width: 768px) {
+    .plants-section h2 {
+        font-size: 2.5rem;
+    }
+    
+    .plants-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .plants-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 
 
 /* Mobile Styles */
@@ -223,31 +310,39 @@ body {
   }
 
   .join h2 {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 20px;
     font-family: 'Noto Serif', serif;
   }
 
   .join-form {
     display: flex;
-  justify-content: center;
-  max-width: 700px;
-  margin: 0 auto;
+    flex-direction: row;
+    width: 100%;
+    /* 🚫 Ensure NO gap or margin */
   }
 
-  .join-form input,
+  .join-form input {
+    flex: 2;
+    font-size: 15px;
+    padding: 12px;
+    border: none;
+    outline: none;
+    border-radius: 6px 0 0 6px; /* Rounded left only */
+    min-width: 0; /* ✅ Prevent overflow */
+    margin: 0;    /* 🚫 Kill margin */
+  }
+
   .join-form button {
     flex: 1;
     font-size: 15px;
     padding: 12px;
-  }
-
-  .join-form button {
+    white-space: nowrap;
     background-color: #E95A08;
     color: white;
     border: none;
     cursor: pointer;
-    font-weight: 500;
+    border-radius: 0 6px 6px 0; /* Rounded right only */
+    margin: 0; /* 🚫 Kill margin */
   }
-  
 }
