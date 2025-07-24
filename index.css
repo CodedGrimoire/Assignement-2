@@ -795,6 +795,3 @@ footer {
 
   animation: spin 5s linear infinite; 
 }
-.trusted-badge img:hover {
-  animation: spin 2s linear infinite;
-}
