@@ -62,9 +62,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 60px 80px;
+  padding: 60px 110px;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 10px;
   height: 100vh;;
 }
 
@@ -129,6 +129,7 @@ body {
   font-size: 50px;
   margin-bottom: 30px;
   font-weight: bold;
+  margin-top: 130px;;
 }
 
 .join-form {
@@ -153,6 +154,9 @@ body {
   border: none;
   font-size: 16px;
   cursor: pointer;
+}
+.join-form button:hover {
+  background-color: #391704;
 }
 
 /* Plants */
@@ -379,23 +383,29 @@ body {
     flex-direction: column-reverse;
     align-items: center;
     text-align: center;
-    padding: 30px 16px;
+    padding: 30px 16px 5px;
+    
   }
+  .hero-section * {
+  margin-bottom: 0;
+}
 
   .hero-text {
     padding: 0 10px;
-    margin-top: 20px;
+    margin-top: 5px;
   }
 
   .hero-text h2 {
     font-size: 24px;
     text-align: left;
+    padding: 0 10px;
     
   }
 
   .hero-text h1 {
     font-size: 28px;
     text-align: left;
+    padding: 0 10px;
   }
 
   .hero-text p {
@@ -418,11 +428,17 @@ body {
   }
 
   .hero-img {
-    margin-top: 20px;
-    flex: 1;
+    margin-top: 5px;
+    width: 100%;
+    padding: 0px;
   }
   .join {
-    padding: 60px 16px;
+    padding: 20px 16px;
+    background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;;
+ 
   }
 
   .join h2 {
@@ -463,7 +479,9 @@ body {
     margin: 0;
   }
 }
-
+.join * {
+  margin-bottom: 0;
+}
 
 footer {
     background-color: #ffffff;
@@ -580,8 +598,9 @@ footer {
 .latest-deal {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 20px;
+    padding: 20px 20px;
     text-align: center;
+
 }
 
 .latest-deal h2 {
@@ -742,4 +761,24 @@ footer {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.trusted-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  animation: spin 5s linear infinite; 
+}
+.trusted-badge img:hover {
+  animation: spin 2s linear infinite;
 }
