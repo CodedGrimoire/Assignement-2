@@ -153,7 +153,7 @@ body {
   color: white;
   border: none;
   font-size: 16px;
-  cursor: pointer;
+  
 }
 .join-form button:hover {
   background-color: #391704;
@@ -236,13 +236,13 @@ body {
     padding: 12px 24px;
     border-radius: 6px;
     font-weight: 600;
-    cursor: pointer;
+    
     width: 100%;
     transition: background 0.3s ease;
 }
 
 .add-to-cart:hover {
-    background: #d54e07;
+    background: #471f0a;
 }
 /* Flower lover */
 
@@ -305,6 +305,190 @@ body {
     position: absolute;
     left: 0;
     top: -5px;
+}
+
+
+/*latest deal */
+.latest-deal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px;
+    text-align: center;
+
+}
+
+.latest-deal h2 {
+    font-family: 'Noto Serif', serif;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.latest-deal p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+    height: 600px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.deal-card1 {
+     background-image: url('assets/deal-bloom.png');
+
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    flex: 1;
+    min-height: 280px;
+}
+.deal-card2 {
+    background-image: url('assets/deal-ana.png');
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    flex: 1;
+    min-height: 280px;
+}
+.deal-card3 {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    flex: 1;
+    min-height: 280px;
+}
+
+
+.right .deal-card3 {
+    background-image: url('assets/deal-zabo.png');
+    height: 100%;
+    min-height: 600px;
+}
+
+.deal-content h3 {
+    font-family: 'Noto Serif', serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.deal-content .shop-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: 500;
+    color: white;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.deal-content .shop-btn:hover {
+    color: white;
+    text-decoration: underline;
+}
+/* Footer */
+footer {
+    background-color: #ffffff;
+    padding: 60px 0;
+    border-top: 1px solid #f0f0f0;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 80px;
+    align-items: start;
+    min-height: auto;
+}
+
+.footer-brand .logo img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.tagline {
+    font-size: 25px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 300px;
+    font-family: "Inter", sans-serif;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 50px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #333;
+}
+
+.social-section {
+    display: flex;
+    gap: 15px;
+}
+
+.social-section img {
+    width: 30px;
+    height: 30px;
+    
+    
+    margin-top: 50px;
+}
+
+.social-btn:hover {
+  transform: scale(1.1);
+  
 }
 
 
@@ -483,72 +667,6 @@ body {
   margin-bottom: 0;
 }
 
-footer {
-    background-color: #ffffff;
-    padding: 60px 0;
-    border-top: 1px solid #f0f0f0;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr auto;
-    gap: 80px;
-    align-items: start;
-    min-height: auto;
-}
-
-.footer-brand .logo img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 20px;
-}
-
-.tagline {
-    font-size: 25px;
-    color: #666;
-    line-height: 1.6;
-    max-width: 300px;
-    font-family: "Inter", sans-serif;
-}
-
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 50px;
-}
-
-.footer-links a {
-    color: #666;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
-}
-
-.footer-links a:hover {
-    color: #333;
-}
-
-.social-section {
-    display: flex;
-    gap: 15px;
-}
-
-.social-section img {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: opacity 0.3s;
-    margin-top: 50px;
-}
-
-.social-section img:hover {
-    opacity: 0.7;
-}
-
 @media (max-width: 576px) {
     .footer-container {
         display: flex;
@@ -592,122 +710,6 @@ footer {
     .trusted-badge{
         display: none;
     }
-}
-
-
-.latest-deal {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px 20px;
-    text-align: center;
-
-}
-
-.latest-deal h2 {
-    font-family: 'Noto Serif', serif;
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.latest-deal p {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 600px;
-    margin: 0 auto 50px;
-    line-height: 1.6;
-}
-
-.deals-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 20px;
-    height: 600px;
-}
-
-.left {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.deal-card1 {
-     background-image: url('assets/deal-bloom.png');
-
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    flex: 1;
-    min-height: 280px;
-}
-.deal-card2 {
-    background-image: url('assets/deal-ana.png');
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    flex: 1;
-    min-height: 280px;
-}
-.deal-card3 {
-    position: relative;
-    border-radius: 15px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    flex: 1;
-    min-height: 280px;
-}
-
-
-.right .deal-card3 {
-    background-image: url('assets/deal-zabo.png');
-    height: 100%;
-    min-height: 600px;
-}
-
-.deal-content h3 {
-    font-family: 'Noto Serif', serif;
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.deal-content .shop-btn {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    font-weight: 500;
-    color: white;
-    display: inline-block;
-    transition: all 0.3s ease;
-}
-
-.deal-content .shop-btn:hover {
-    color: white;
-    text-decoration: underline;
 }
 
 @media (max-width: 576px) {
